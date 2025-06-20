@@ -1,4 +1,4 @@
-# Fake Code Generator
+# Fake Code Image Generator
 
 This Python script generates a "wall of text" resembling C-like programming languages, complete with data types, curly braces, semicolons, and basic syntax highlighting. It's designed to create visually dense code snippets, ideal for use as background images or banners.
 
@@ -41,6 +41,8 @@ This Python script generates a "wall of text" resembling C-like programming lang
 ## Example Output (Image)
 
 A `fake_code_banner.png` file will be generated in the same directory where you run the script.
+
+![Generated image example](fake_code_banner.png)
 
 ---
 
