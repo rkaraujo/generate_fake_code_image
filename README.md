@@ -11,7 +11,7 @@ This Python script generates a "wall of text" resembling C-like programming lang
 
 ## How to Use
 
-1.  **Save the script:** Save the provided Python code as `generate_fake_code.py` in your desired directory.
+1.  **Save the script:** Save the provided Python code as `generate_fake_code_image.py` in your desired directory.
 
 2.  **Install dependencies:** This script requires the `Pillow` library to generate image files. It's recommended to install it within a virtual environment.
 
@@ -27,13 +27,13 @@ This Python script generates a "wall of text" resembling C-like programming lang
 3.  **Generate code in terminal:** To print the fake code directly to your terminal (with ANSI colors if supported):
 
     ```bash
-    python generate_fake_code.py --statements 300
+    python generate_fake_code_image.py --statements 300
     ```
 
 4.  **Generate an image file:** To create an image file (e.g., `fake_code_banner.png`) with the fake code, specify the desired width, height, and optionally the output filename:
 
     ```bash
-    python generate_fake_code.py --width 1920 --height 1080 --statements 500 --output fake_code_banner.png
+    python generate_fake_code_image.py --width 1920 --height 1080 --statements 500 --output fake_code_banner.png
     ```
 
     You can adjust `--width`, `--height`, `--statements`, and `--output` to control the image dimensions, the amount of code generated, and the output filename.
