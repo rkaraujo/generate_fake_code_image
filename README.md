@@ -21,7 +21,7 @@ This Python script generates a "wall of text" resembling C-like programming lang
     .\venv\Scripts\activate.bat
     # On macOS/Linux:
     source venv/bin/activate
-    pip install Pillow
+    pip install -r requirements.txt
     ```
 
 3.  **Generate code in terminal:** To print the fake code directly to your terminal (with ANSI colors if supported):
@@ -30,13 +30,13 @@ This Python script generates a "wall of text" resembling C-like programming lang
     python generate_fake_code.py --statements 300
     ```
 
-4.  **Generate an image file:** To create an image file (e.g., `fake_code_banner.png`) with the fake code, specify the desired width and height:
+4.  **Generate an image file:** To create an image file (e.g., `fake_code_banner.png`) with the fake code, specify the desired width, height, and optionally the output filename:
 
     ```bash
-    python generate_fake_code.py --width 1920 --height 1080 --statements 500
+    python generate_fake_code.py --width 1920 --height 1080 --statements 500 --output fake_code_banner.png
     ```
 
-    You can adjust `--width`, `--height`, and `--statements` to control the image dimensions and the amount of code generated.
+    You can adjust `--width`, `--height`, `--statements`, and `--output` to control the image dimensions, the amount of code generated, and the output filename.
 
 ## Example Output (Image)
 

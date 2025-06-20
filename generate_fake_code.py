@@ -2,7 +2,7 @@ import random
 from PIL import Image, ImageDraw, ImageFont
 import argparse
 
-def generate_fake_code(num_statements=200, width=1920, height=1080):
+def generate_fake_code(num_statements=200, width=1920, height=1080, output_filename="fake_code_banner.png"):
     """Generates a wall of fake code resembling C-like languages and saves it as an image."""
     
     keywords = ["public", "private", "class", "static", "void", "int", "string", "bool", "float", "if", "else", "for", "while", "return", "try", "catch", "new"]
@@ -231,7 +231,6 @@ def generate_fake_code(num_statements=200, width=1920, height=1080):
         if current_y > height - line_height: # Check after each statement if we are out of vertical space
             break
 
-    output_filename = "fake_code_banner.png"
     img.save(output_filename)
     return output_filename
 
@@ -240,7 +239,8 @@ if __name__ == "__main__":
     parser.add_argument("--width", type=int, default=1920, help="Width of the output image.")
     parser.add_argument("--height", type=int, default=1080, help="Height of the output image.")
     parser.add_argument("--statements", type=int, default=300, help="Number of fake statements to generate.")
+    parser.add_argument("--output", type=str, default="fake_code_banner.png", help="Output filename for the image.")
     args = parser.parse_args()
 
-    output_file = generate_fake_code(num_statements=args.statements, width=args.width, height=args.height)
+    output_file = generate_fake_code(num_statements=args.statements, width=args.width, height=args.height, output_filename=args.output)
     print(f"Generated fake code image: {output_file}")
