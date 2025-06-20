@@ -28,13 +28,15 @@ def generate_fake_code(num_statements=200, width=1920, height=1080):
 
     try:
         # Try to load a common monospace font, or fallback to default
-        font = ImageFont.truetype("arial.ttf", 12)
+        font_size = 14 # Increased font size
+        font = ImageFont.truetype("arial.ttf", font_size)
     except IOError:
         font = ImageFont.load_default()
+        font_size = 12 # Fallback font size
 
     x_offset = 10
     y_offset = 10
-    line_height = 15 # Approximate line height for the font size
+    line_height = font_size + 3 # Adjust line height based on new font size
 
     def get_text_color(text, statement_type=None):
         if text in keywords:
